@@ -93,8 +93,7 @@ if(isset($_POST['submit'])) {
 <body class="containerHome">
 <div class="container">
     <div class="text-center">
-        <h1>TRIP PLANNER</h1>
-        <legend></legend>
+        <h1>Road Trip</h1>
         <div class="row vertical-offset-100">
             <div class="col-md-4 col-md-offset-4">
                 <div class="panel panel-primary">
@@ -112,11 +111,6 @@ if(isset($_POST['submit'])) {
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="password">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
                                 </div>
                                 <input class="btn btn-lg btn-info btn-block" type="submit" name="submit">
                             </fieldset>

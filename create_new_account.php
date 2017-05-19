@@ -100,8 +100,7 @@ if(isset($_POST['submit'])) {
 </head>
 <body class="container">
 <div class="text-center">
-    <h1>TRIP PLANNER</h1>
-    <legend></legend>
+    <h1>Road Trip</h1>
     <div class="row vertical-offset-100">
         <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-primary">
@@ -134,7 +133,7 @@ if(isset($_POST['submit'])) {
                     </div>
                     <hr>
                     <div class="createAccountCancel">
-                        <a href="homePage.html">Cancel</a>
+                        <a href="landing_page.php">Cancel</a>
                     </div>
                 </div>
             </div>
