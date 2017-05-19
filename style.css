@@ -1,0 +1,508 @@
+/* Sean's CSS */
+.main_container {
+    height:100vh;
+}
+#map {
+    height: 100%;
+    border: 2px solid black;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #73C8A9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #373B44, #73C8A9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #373B44, #73C8A9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.left_sidebar {
+    height: 100vh;
+    border: 2px solid black;
+}
+.left_sidebar h6 {
+    color:white;
+}
+.left_sidebar_container{
+    height:75%;
+}
+.right_sidebar{
+    height:100vh;
+    position:relative;
+    border: 2px solid black;
+}
+.nav > .dropdown {
+    top: 36px;
+    right:15px;
+}
+
+.nav > .dropdown > button {
+    background-color: cadetblue;
+}
+#weatherDisplayContainer{
+    color:white;
+    height:100%;
+    font-size: small;
+}
+.panelAccordian{
+    height:25%;
+    /*font-size: 10px;*/
+    margin-bottom: -20px;
+}
+.button_holder{
+    /*height:10%;*/
+}
+.direction_detail{
+    height:100%;
+}
+.controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#origin-input,
+#destination-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 200px;
+}
+
+#origin-input:focus,
+#destination-input:focus {
+    border-color: #4d90fe;
+}
+
+#mode-selector {
+    display: none;
+}
+/* Optional: Makes the sample page fill the window. */
+#displayData {
+    /*color: white;*/
+    display: block;
+    background-color: black;
+    cursor: pointer;
+}
+
+#more {
+    /*color: white;*/
+    cursor: pointer;
+}
+
+.dropdown {
+    display: inline;
+}
+
+.glyphicon-camera {
+    color: dodgerblue;
+}
+
+.glyphicon-tree-conifer {
+    color: green;
+}
+
+.glyphicon-scale {
+    color: rebeccapurple;
+}
+
+.glyphicon-cutlery {
+    color: darkred;
+}
+
+.infoPlaceName {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.infoPlaceAddress {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+/* style for nav bar on home page */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 0.5;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.homeNav a {
+    padding: 0px 56px 0px 70px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    transition: 0.8s;
+}
+
+.homeNav a:hover {
+    color: #ffff00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.vertical-offset-100{
+    padding-top:100px;
+}
+
+.panel{
+    background-color: rgba(255,255,255,0.7);
+}
+.createAccountCancel a{
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+}
+.createAccountNav a {
+    padding: 15px 8px 8px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.8s;
+}
+
+.createAccountNav a:hover {
+    color: #ffff00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus {
+    color: #ffff00;
+    text-decoration: none;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#home {
+    font-size: 80px;
+    cursor: pointer;
+    float: left;
+}
+
+#home2 {
+    font-size: 30px;
+    cursor: pointer;
+
+}
+
+/* side nav bar for main maps page */
+.sidenav2 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+}
+
+.sidenav2 a {
+    padding: 6px 8px 6px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav2 a:hover, .offcanvas a:focus {
+    color: #ffff00;
+    text-decoration: none;
+}
+
+.sidenav2 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Home page */
+.containerHome {
+    background: url("images/road-trip1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.container{
+    background: url("images/road-trip1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#appNameHeader {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 80px;
+}
+
+#destination-input {
+    max-width: 500px;
+}
+
+#mapPageMenuContainer {
+    /*background: url("images/road-trip1.jpg") no-repeat center center fixed;*/
+}
+
+.sidenav3 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    /*top: 0;*/
+    /*left: 0;*/
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    /*font-size: 10px;*/
+}
+
+.direction_detail{
+    position:absolute;
+    z-index:1;
+}
+
+.sidenav3 a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav3 a:hover, .offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav3 .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#mapLogo {
+    font-size: 30px;
+    text-align: center;
+}
+
+#mapPageMenuContainer {
+    border-bottom: solid black;
+}
+.mapMenu > span{
+    font-size: 18px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 800px ) {
+    #home2 {
+        font-size: 25px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    #mapLogo {
+        padding-left: 25px;
+    }
+
+
+    #getDirectionsButton {
+        font-size: 16px;
+        text-align: right;
+        float: right;
+        padding-top: 16px;
+        padding-left: 0;
+        padding-right:0;
+    }
+}
+
+@media all and (max-width: 420px ) {
+    #origin-input {
+        width: 45%
+    }
+
+    #destination-input {
+        width: 45%
+    }
+    .homeNav a {
+        padding: 0 11px 0 11px;
+        text-decoration: none;
+        font-size: 20px;
+        display: inline-block;
+        transition: 0.8s;
+    }
+}
+
+#displayData2 {
+    margin: 15px;
+}
+#save_places_to_database {
+    margin-top: 10px;
+}
+
+
+/*todolist*/
+
+
+/* Include the padding and border in an element's total width and height */
+#todolist_body * {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+#todolist_body ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the list items */
+#todolist_body  li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style-type: none;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#todolist_body  li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+#todolist_body li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+#todolist_body li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#todolist_body li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the close button */
+#myUL .delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px
+}
+
+#myUL .delete:hover {
+    color: white;
+}
+
+/* Style the header */
+.header {
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+#todolist_body input {
+    border: 1px solid black;
+    width: 75%;
+    padding: 10px;
+    /* float: left; */
+    font-size: 16px;
+    color:black;
+}
+
+/* Style the "Add" button */
+#todolist_body .addBtn:hover {
+    background-color: #bbb;
+}
