@@ -13,7 +13,7 @@ Developed with 3 others Developers. A Road Trip application enable users to crea
 *  implemented Eventfull api, Google Api Such as: Geolocation, Google Places and Google Directions. 
 ### Key Technologies:
 * Php
-* Mysql
+* MySQL
 * HTML5
 * CSS3
 * Bootstrap
