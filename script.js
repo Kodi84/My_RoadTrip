@@ -1,17 +1,9 @@
 $(document).ready(function(){
     // disable left side div when users not login
-    // var nodes = document.getElementById("left_sidebar").getElementsByTagName('*');
-    // for(var i = 0; i < nodes.length; i++){
-    //     nodes[i].disabled = true;
-    // }
     $("#left_sidebar *").attr("disabled", "disabled").off('click');
     // end disable left side
 
     // disable right side div when users not login
-    // var nodes = document.getElementById("right_sidebar").getElementsByTagName('button');
-    // for(var i = 0; i < nodes.length; i++){
-    //     nodes[i].disabled = true;
-    // }
     $("#right_sidebar *").attr("disabled", "disabled").off('click');
 
     //end disable right side
