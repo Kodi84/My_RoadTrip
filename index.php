@@ -3,13 +3,12 @@ require("db.php");
 session_start();
 
 if(isset($_SESSION['auth'])){
-//    echo $_SESSION['auth'];
-//    echo $_SESSION['id'];
-//    echo $_SESSION['name'];
+
 }else {
     header('Location:signin.php');
 }
-//?>
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -445,5 +444,3 @@ if(isset($_SESSION['auth'])){
 </div>
 </body>
 </html>
-
-
