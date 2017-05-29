@@ -31,7 +31,7 @@ if(isset($_SESSION['auth'])){
         var data2;
         function test(){
             $.ajax({
-                url: 'http://localhost/Roadtrip/display_data_from_database.php',
+                url: 'https://cungcancode.com/projects/Roadtrip/display_data_from_database.php',
                 type: "POST",
                 dataType: 'json',
                 data: ({
@@ -100,7 +100,7 @@ if(isset($_SESSION['auth'])){
                 <ul class="dropdown-menu">
                     <li data-toggle="modal" data-target="#myModal"><a href="#">Profile</a></li>
 
-                    <li><a href="http://localhost/Roadtrip/signout.php">Logout</a></li>
+                    <li><a href="signout.php">Logout</a></li>
                     <!-- Modal -->
 
 <!--                    end Modal-->
@@ -156,7 +156,7 @@ if(isset($_SESSION['auth'])){
                                 </fieldset>
                             </form>
                         </div>
-                        <?
+                        <?php
                             }
                         }
 

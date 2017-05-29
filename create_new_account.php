@@ -65,7 +65,7 @@ if(isset($_POST['submit'])) {
             $email = mysqli_real_escape_string($connection,$email);
             $confirmCode = mysqli_real_escape_string($connection,$confirmCode);
 
-            $query = "INSERT INTO `users` VALUES ('','$username','$password','$email','0','$confirmCode')";
+            $query = "INSERT INTO `users` (username, password, email, confirmed, confirm_code) VALUES ('$username','$password','$email','0','$confirmCode')";
             $result = mysqli_query($connection,$query);
             include "php_mailer/mail_handler.php";
 
@@ -74,7 +74,7 @@ if(isset($_POST['submit'])) {
             echo '</script>';
 
             if(!$result){
-                echo(mysqli_error($result));
+                die(mysqli_error($connection));
             }
         }
     }

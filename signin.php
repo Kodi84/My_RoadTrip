@@ -59,7 +59,7 @@ if(isset($_POST['submit'])) {
             $_SESSION['auth'] = true;
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['name'] = $row['username'];
-            header('Location:http://localhost/Roadtrip/index.php');
+            header('Location:index.php');
         }else {
             header("location:signin.php?err=". urldecode("Please activate your account before log in"));
             exit();

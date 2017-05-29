@@ -5,7 +5,7 @@ require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->SMTPDebug = 0;                               // Enable verbose debug output
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
+//$mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
 
@@ -38,8 +38,8 @@ $mail->Subject = 'Email Verification';
 $message =
     "
                 Please Confirm your email 
-                Click the link below to verify your account 
-                 http://localhost/Roadtrip/signin.php?username=$username&code=$confirmCode
+                Click the link below to verify your account
+                 http://cungcancode.com/projects/Roadtrip/signin.php?username=$username&code=$confirmCode
                 ";
 $mail->Body    = 'Thank you for sign up for our Roadtrip app. ' .$message;
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';

@@ -24,7 +24,7 @@ function send_places_database(){
     });
 
     $.ajax({
-        url: 'http://localhost/Roadtrip/data_from_frontend.php',
+        url: 'https://cungcancode.com/projects/Roadtrip/data_from_frontend.php',
         type: "POST",
         data: ({
             places: sendData,
