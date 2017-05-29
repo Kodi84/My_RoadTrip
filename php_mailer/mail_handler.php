@@ -35,6 +35,7 @@ $mail->addReplyTo('roadtrip@noreply.com'/*email address of the person sending th
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Email Verification';
+$username = urlencode($username);
 $message =
     "
                 Please Confirm your email 

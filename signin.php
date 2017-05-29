@@ -5,6 +5,7 @@ session_start();
 //email active start
 if(isset($_GET['username']) || isset($_GET['code'])){
     $username = $_GET['username'];
+    $username = urldecode($username);
     $code = $_GET['code'];
 
     $query = "SELECT * FROM users ";
@@ -14,12 +15,7 @@ if(isset($_GET['username']) || isset($_GET['code'])){
         $db_code = $row['confirm_code'];
         $confirmed = $row['confirmed'];
     }
-
     if($code == $db_code){
-//    $query_confirmed = "UPDATE `users` SET `confirmed`='1'";
-//    $query_confirm_code = "UPDATE `users` SET `confirm_code`='0'";
-//   $result_confirmed = mysqli_query($connection,$query_confirmed);
-//   $result_confirm_code = mysqli_query($connection,$query_confirm_code);
         $query = "UPDATE users SET confirmed='1', confirm_code='0'WHERE username='$username'";
         $result = mysqli_query($connection, $query);
         if(!$result){
@@ -34,21 +30,16 @@ if(isset($_GET['username']) || isset($_GET['code'])){
     }
 }
 //email activate end
-
-
 //login start
 if(isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
     //            hashing password
     $hash_format = "$2y$10$";
     $salt = "iusesomecrazystrings22";
     $hash_and_salt = $hash_format.$salt;
     $password = crypt($password,$hash_and_salt);
 //            end hashing password
-
-
     $query = "SELECT * FROM users ";
     $query .= "WHERE username = '$username' and password= '$password' ";
     $result = mysqli_query($connection, $query);

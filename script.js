@@ -390,7 +390,7 @@ function getWeather() {
         $.ajax({
             dataType: 'jsonp',
             method: "GET",
-            url: 'http://api.wunderground.com/api/dd19086be18c6fc3/alerts/almanac/conditions/forecast/q/' + state + '/' + city + '.json',
+            url: 'https://api.wunderground.com/api/dd19086be18c6fc3/alerts/almanac/conditions/forecast/q/' + state + '/' + city + '.json',
 
             success: function (result) {
                 noAlerts(result);

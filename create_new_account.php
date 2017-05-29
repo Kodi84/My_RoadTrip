@@ -51,6 +51,8 @@ if(isset($_POST['submit'])) {
             echo (mysqli_error($connection));
         }else {
             $confirmCode= rand();
+            //remove extra spapces between words 
+            $username = trim(preg_replace('/\s+/', ' ', $username));
             $username = mysqli_real_escape_string($connection,$username);
             $password = mysqli_real_escape_string($connection,$password);
 
