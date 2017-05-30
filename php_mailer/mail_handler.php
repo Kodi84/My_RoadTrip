@@ -53,10 +53,12 @@
 // }
 
 // Create the email and send the message
+$username = urlencode($username);
 $to = "$email"; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_subject = "Road Trip verification email";
-$email_body = "Please Confirm your email 
-              Click the link below to verify your account 
+$email_body = "
+Thank you for registering wit us.   
+Please Confirm your email. Click the link below to verify your account: 
               http://cungcancode.com/projects/Roadtrip/signin.php?username=$username&code=$confirmCode";
 $headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: noreply@domain.com";
