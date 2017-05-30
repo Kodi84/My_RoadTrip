@@ -59,7 +59,7 @@ $email_subject = "Road Trip verification email";
 $email_body = "
 Thank you for registering wit us.   
 Please Confirm your email. Click the link below to verify your account: 
-              http://cungcancode.com/projects/Roadtrip/signin.php?username=$username&code=$confirmCode";
+https://cungcancode.com/projects/Roadtrip/signin.php?username=$username&code=$confirmCode";
 $headers = "From: noreply@roadtrip.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: noreply@roadtrip.com";
 mail($to,$email_subject,$email_body,$headers);
