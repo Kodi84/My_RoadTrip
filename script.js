@@ -2,12 +2,9 @@ $(document).ready(function(){
     // disable left side div when users not login
     $("#left_sidebar *").attr("disabled", "disabled").off('click');
     // end disable left side
-
     // disable right side div when users not login
     $("#right_sidebar *").attr("disabled", "disabled").off('click');
-
     //end disable right side
-
     $("#mode-selector").hide();
     // $("#getDirectionsButton").hide();
     $("#weatherDisplayContainer").hide();
@@ -63,12 +60,8 @@ var pricePerGallon = null;
 var weatherLoaded = false;
 var cityForEvent = null;
 var choice = null;
-
-
 var dataPointsBlocker = false;
 var findEventBlocker = false;
-
-
 function initMap() {
     geocoder = new google.maps.Geocoder;
     directionsDisplay = new google.maps.DirectionsRenderer;
@@ -99,7 +92,6 @@ function AutocompleteDirectionsHandler(map) {
         originInput, {placeIdOnly: true});
     var destinationAutocomplete = new google.maps.places.Autocomplete(
         destinationInput, {placeIdOnly: true});
-
 
     this.setupClickListener('changemode-driving', 'DRIVING');
     this.setupPlaceChangedListener(originAutocomplete, 'ORIG');
@@ -138,14 +130,11 @@ function create_info_event(marker,result){
         href: result.venue_url,
         text: "Click here for more details",
         target:"_blank"
-
     });
-
     var container = $("<div>").append(title,cityLabel,address,eventLink);
     var infoWindow2 = new google.maps.InfoWindow({
         content: container.html()
     });
-
     marker.addListener('click', (
         function(){return function(){
             infoWindow2.open(map,marker);
@@ -155,7 +144,6 @@ function create_info_event(marker,result){
 }
 
 AutocompleteDirectionsHandler.prototype.setupClickListener = function(id, mode) {
-
     var radioButton = document.getElementById(id);
     var me = this;
     radioButton.addEventListener('click', function () {
@@ -211,8 +199,6 @@ AutocompleteDirectionsHandler.prototype.route = function() {
             totalMilesofTrip = parseFloat(response.routes[0].legs[0].distance.text);
             dataPointsBlocker = true;
             findEventBlocker = true;
-
-
             var currentI = 0;
             nodes = [path[0]];
             for(var i =1; i< path.length; i++ ){
@@ -237,11 +223,9 @@ AutocompleteDirectionsHandler.prototype.route = function() {
         }
     });
     //marker for events
-
 };
 
 <!-- Mikes JS-->
-
 function checkForCheckedValues(){
     checkedBoxes=[];
     $("input[type=checkbox]:checked").each(function() {
@@ -249,7 +233,6 @@ function checkForCheckedValues(){
     });
     console.log("users picks to have displayed:" +" "+ checkedBoxes);
 }
-
 function slicedNodes() {
     nodesToCheck = nodes.slice();
     var splitPoint = Math.ceil(nodesToCheck.length / 6);
@@ -372,7 +355,6 @@ function showTraffic() {
         trafficLayer.setMap(null);
     }
 }
-
 /**
  * Identifies the City and State based on the destination
  * The City and State are going to be used for the weather input
@@ -515,5 +497,3 @@ function set_val_destination(){
 function show_message(message){
     alert(message);
 }
-
-
