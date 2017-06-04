@@ -1,7 +1,6 @@
 <?php
 require("db.php");
 session_start();
-
 //email active start
 if(isset($_GET['username']) || isset($_GET['code'])){
     $username = $_GET['username'];
