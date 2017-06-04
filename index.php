@@ -1,9 +1,7 @@
 <?php
 require("db.php");
 session_start();
-
 if(isset($_SESSION['auth'])){
-
 }else {
     header('Location:signin.php');
 }
@@ -52,8 +50,6 @@ if(isset($_SESSION['auth'])){
                             data_object_length++;
                         }
                     }
-
-
                     var favorite  = $("<p>Places you chose along the route:  </p>");
                     if($("#myLastTripModal .modal-body").text().length == 22){
 
@@ -67,7 +63,6 @@ if(isset($_SESSION['auth'])){
                                 $(favorite).append(word);
                             }
                         }
-
                         var original_place  = $("<p>Your last location was </p>");
                         $(original_place).append(origin);
 
@@ -78,9 +73,6 @@ if(isset($_SESSION['auth'])){
                     }else {
                         return false;
                     }
-
-
-
                 }
             });
         }
@@ -125,12 +117,8 @@ if(isset($_SESSION['auth'])){
                             $user_id = $_SESSION['user_id'];
                             $username = $_POST['username'];
                             $email = $_POST['email'];
-
-
                             $username = mysqli_real_escape_string($connection,$username);
                             $email = mysqli_real_escape_string($connection,$email);
-
-
                             $query = "UPDATE users SET username = '$username', email = '$email' WHERE id = $user_id";
                             $result = mysqli_query($connection,$query);
                         }
@@ -159,9 +147,7 @@ if(isset($_SESSION['auth'])){
                         <?php
                             }
                         }
-
                         ?>
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -174,7 +160,6 @@ if(isset($_SESSION['auth'])){
 </div>
 
 <div class="col-sm-2 left_sidebar">
-
     <!--<h2 class="text-center">Menu</h2>-->
     <div class="left_sidebar_container text-center">
         <!-- first drop down -- Accommodations -->
@@ -190,7 +175,6 @@ if(isset($_SESSION['auth'])){
                 <li><a><input value="campground + rv_park" type="checkbox" name="acc_camping"/>Camping/RV Parks</a></li>
             </ul>
         </div>
-
         <!--second drop down Attractions-->
         <div class="dropdown">
             <h6>ATTRACTIONS</h6>
@@ -204,7 +188,6 @@ if(isset($_SESSION['auth'])){
                 <li><a><input  value="zoo / aquarium" type="checkbox" name="att_zoo"/>Zoo/Aquarium</a></li>
             </ul>
         </div>
-
         <!-- Third drop down Outdoors and Recreation -->
         <div class="dropdown">
             <h6>OURDOORS AND RECREATION</h6>
@@ -218,7 +201,6 @@ if(isset($_SESSION['auth'])){
                 <li><a><input value="nationalParks" type="checkbox" name="out_parks"/>National Parks</a></li>
             </ul>
         </div>
-
         <!-- forth drop down Gas Stations and Service Stations -->
         <div class="dropdown">
             <h6>GAS AND SERVICE STATIONS</h6>
@@ -233,7 +215,6 @@ if(isset($_SESSION['auth'])){
                 <li><a><input  value="gas / car repair" type="checkbox"/>Gas and Service Stations</a></li>
             </ul>
         </div>
-
         <!-- fifth drop down food -->
         <div class="dropdown">
             <h6>FOOD</h6>
@@ -261,14 +242,10 @@ if(isset($_SESSION['auth'])){
             </button>
             <button data-toggle="modal" data-target="#todo_list" class="btn btn-primary col-sm-12">Todo List
             </button>
-
         </div>
 <!--        my last trip modal -->
-
-
         <div class="modal fade" id="myLastTripModal" role="dialog">
             <div class="modal-dialog">
-
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
@@ -276,13 +253,11 @@ if(isset($_SESSION['auth'])){
                         <h4 class="modal-title">My Last Trip Info. </h4>
                     </div>
                     <div class="modal-body">
-
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -290,7 +265,6 @@ if(isset($_SESSION['auth'])){
         <!-- Modal todolist -->
         <div class="modal fade" id="todo_list" role="dialog">
             <div class="modal-dialog">
-
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
@@ -300,7 +274,6 @@ if(isset($_SESSION['auth'])){
                     <div class="modal-body" id="todolist_body">
                             <input type="text" id="myInput" placeholder="List Items...">
                             <button onclick="newElement()" class="addBtn btn btn-info">Add</button>
-
                         <ul id="myUL">
                         </ul>
                     </div>
@@ -308,14 +281,10 @@ if(isset($_SESSION['auth'])){
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
-
     <div class="button_left_holder">
-
         <button id="save_places_to_database" type="button" class="btn btn-success col-sm-12" data-dismiss="modal">Save Trip
         </button>
         <button class="btn btn-info col-sm-12 my_last_trip"  data-toggle="modal" data-target="#myLastTripModal" onclick="test()">My Last Trip
@@ -355,7 +324,6 @@ if(isset($_SESSION['auth'])){
         </div>
     </div>
     <!--end event modal-->
-
 </div>
 <!--input for map-->
 <div id="inputsContainer">
@@ -364,19 +332,15 @@ if(isset($_SESSION['auth'])){
     <input id="destination-input" class="col-sm-5" type="text"
            placeholder="Enter a destination">
 </div>
-
 <div id="mode-selector" class="controls">
     <input name="type" id="changemode-driving">
     <label for="changemode-driving"></label>
 </div>
 <!--end input for map-->
-
 <div class="main_container col-sm-8">
     <div id="map" class="">
     </div>
-
 </div>
-
 <div class="col-sm-2 right_sidebar">
     <div class="button_holder">
         <!--<button class="col-sm-6 btn btn-info text-center" id="getDirectionsButton" onclick="openNav3()">Directions</button>-->
@@ -387,7 +351,6 @@ if(isset($_SESSION['auth'])){
             <span class="glyphicon glyphicon-cloud" ></span>
         </button>
     </div>
-
     <!--direction-->
     <div class="direction_detail">
         <!--<div id="mySidenav3"></div>-->
@@ -404,7 +367,6 @@ if(isset($_SESSION['auth'])){
         </div>
     </div>
     <!--end direction-->
-
     <!--weather-->
     <div id="weatherDisplayContainer" class="col-sm-12 text-center">
 
@@ -417,7 +379,6 @@ if(isset($_SESSION['auth'])){
             <div id="weatherHumidity"></div>
             <div id="weatherWind"></div>
         </div>
-
         <div class="panelAccordian">
             <h6 class="accordion" id="weatherDOW1"></h6>
             <div id="weatherIcon1"></div>
